@@ -446,10 +446,10 @@ template {
     border-top: 4px solid black;
     text-align: center;
     font-size: 15px;
-    line-height: 2.1; }
+    line-height: 2.1;
+    cursor: pointer; }
 
 .result-wrapper {
-  display: none;
   text-transform: uppercase;
   width: 252px;
   height: 130px;
