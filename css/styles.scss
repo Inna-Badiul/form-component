@@ -3,8 +3,8 @@
 @import 'result-component';
 
 .active {
-  background-color: black;
-  color: white;
+  background-color: #222222;
+  color: white!important;
 }
 
 .hide-form {
@@ -15,6 +15,6 @@
 
 .show-result {
   opacity: 1;
-  margin-top: 50px;
+  margin-top: 90px;
   transition: opacity 0.3s ease 0.5s, margin-top 0.8s ease-out;
 }
