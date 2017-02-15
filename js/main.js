@@ -1,11 +1,13 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-    var checkboxes = document.getElementsByClassName("default-checkbox");
+    var $checkboxes = document.getElementsByClassName("default-checkbox");
     var qs = document.querySelector.bind(document),
         $buyNowButton = qs(".button"),
-        $selectedItemTitle = qs(".selected-item-title");
+        $selectedItemTitle = qs(".selected-item-title"),
+        $formWrapper = qs(".form-wrapper"),
+        $resultWrapper = qs(".result-wrapper");
 
-    for (var i = 0; i < checkboxes.length; i++) {
-        checkboxes[i].addEventListener("change", function () {
+    for (var i = 0; i < $checkboxes.length; i++) {
+        $checkboxes[i].addEventListener("change", function () {
             if (this.checked == false) {
                 this.checked = true;
             } else {
@@ -21,10 +23,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
     $buyNowButton.addEventListener("click", function () {
-        for (var k = 0; k < checkboxes.length; k++) {
-            if (checkboxes[k].checked == true) {
-               $selectedItemTitle.innerText = checkboxes[k].parentNode.querySelector(".item-title").innerHTML;
+        for (var k = 0; k < $checkboxes.length; k++) {
+            if ($checkboxes[k].checked == true) {
+                $selectedItemTitle.innerText = $checkboxes[k].parentNode.querySelector(".item-title").innerHTML;
             }
         }
+        $formWrapper.className += " hide-form";
+        $resultWrapper.className += " show-result";
     });
 });

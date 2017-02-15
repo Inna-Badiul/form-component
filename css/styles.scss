@@ -6,3 +6,15 @@
   background-color: black;
   color: white;
 }
+
+.hide-form {
+  opacity: 0;
+  height: 0px;
+  transition: opacity 0.3s ease 0.5s, height 0.3s ease-out;
+}
+
+.show-result {
+  opacity: 1;
+  height: 130px;
+  transition: height 0.3s ease-out, opacity 0.3s ease 0.5s;
+}
