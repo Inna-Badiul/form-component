@@ -1,24 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var $checkboxes = document.querySelectorAll(".default-checkbox"),
-        qs = document.querySelector.bind(document),
+    var qs = document.querySelector.bind(document),
+        qsAll = document.querySelectorAll.bind(document),
+        $checkboxes = qsAll(".default-checkbox"),
         $buyNowButton = qs(".button"),
         $selectedItemTitle = qs(".selected-item-title"),
         $formWrapper = qs(".form-wrapper"),
         $resultWrapper = qs(".result-wrapper"),
+        $defaultCheckbox = qs(".default-checkbox"),
         $checkedItems;
 
-    changeEventListener();
+    addChangeEventListeners();
     buyButtonClickListener();
-    
-    addActiveClass(document.querySelector(".default-checkbox"));
-    
-    function changeEventListener() {
+
+    addActiveClass($defaultCheckbox);
+
+    function addChangeEventListeners() {
         for (var i = 0; i < $checkboxes.length; i++) {
             $checkboxes[i].addEventListener("change", function () {
                 if (this.checked == false) {
                     this.checked = true;
                 } else {
-                    $checkedItems = document.querySelectorAll("input:checked");
+                    $checkedItems = qsAll("input:checked");
                     addActiveClass(this);
                     for (var j = 0; j < $checkedItems.length; j++) {
                         if (this !== $checkedItems[j]) {
@@ -33,11 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function buyButtonClickListener() {
         $buyNowButton.addEventListener("click", function () {
-            for (var k = 0; k < $checkboxes.length; k++) {
-                if ($checkboxes[k].checked == true) {
-                    $selectedItemTitle.innerText = $checkboxes[k].parentNode.querySelector(".item-title").innerHTML;
-                }
-            }
+            $selectedItemTitle.innerText = qs("input:checked").parentNode.querySelector(".item-title").innerHTML;
             $formWrapper.className += " hide-form";
             $resultWrapper.className += " show-result";
         });
