@@ -5,7 +5,9 @@ var gulp = require('gulp'),
 gulp.task('sass', function () {
     return gulp.src('css/styles.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions', 'ie 10']
+        }))
         .pipe(gulp.dest('dist'));
 });
 

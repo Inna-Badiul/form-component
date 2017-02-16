@@ -1,29 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var $checkboxes = document.getElementsByClassName("default-checkbox");
-    var qs = document.querySelector.bind(document),
+    var $checkboxes = document.querySelectorAll(".default-checkbox"),
+        qs = document.querySelector.bind(document),
         $buyNowButton = qs(".button"),
         $selectedItemTitle = qs(".selected-item-title"),
         $formWrapper = qs(".form-wrapper"),
-        $resultWrapper = qs(".result-wrapper");
+        $resultWrapper = qs(".result-wrapper"),
+        $checkedItems;
+
 
     function toggleCheckedItem() {
         for (var i = 0; i < $checkboxes.length; i++) {
+            if ($checkboxes[i].checked) {
+                addActiveClass($checkboxes[i]);
+            }
             $checkboxes[i].addEventListener("change", function () {
                 if (this.checked == false) {
                     this.checked = true;
                 } else {
-                    var checkedItems = document.querySelectorAll("input:checked");
-                    this.parentNode.className += " active";
-                    for (var j = 0; j < checkedItems.length; j++) {
-                        if (this !== checkedItems[j]) {
-                            checkedItems[j].checked = false;
-                            checkedItems[j].parentNode.className = checkedItems[j].parentNode.className.replace("active", "");
+                    $checkedItems = document.querySelectorAll("input:checked");
+                    addActiveClass(this);
+                    for (var j = 0; j < $checkedItems.length; j++) {
+                        if (this !== $checkedItems[j]) {
+                            $checkedItems[j].checked = false;
+                            removeActiveClass($checkedItems[j]);
                         }
                     }
                 }
             });
         }
     }
+
     toggleCheckedItem();
 
     function showResult() {
@@ -37,5 +43,14 @@ document.addEventListener("DOMContentLoaded", function () {
             $resultWrapper.className += " show-result";
         });
     }
+
     showResult();
+
+    function addActiveClass(element) {
+        element.parentNode.className += " active";
+    }
+
+    function removeActiveClass(element) {
+        element.parentNode.className = element.parentNode.className.replace("active", "");
+    }
 });

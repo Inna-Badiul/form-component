@@ -3,19 +3,19 @@
   text-transform: uppercase;
   width: 252px;
   height: 130px;
-  border: 4px solid rgb(60,199,0);
+  border: $big-border $green;
   margin: -540px auto 0 auto;
-  border-radius: 5px;
+  border-radius: $border-radius;
   text-align: center;
-  background-color: rgb(60,199,0);
+  background-color: $green;
   .selected-item-title {
     padding: 36px 0;
-    background-color: #d9f5ca;
+    background-color: $light-green;
     color: #71cb5c;
     border: 1px solid white;
   }
   .gratitude {
-    border-top: 4px solid rgb(60,199,0);
+    border-top: $big-border $green;
     font-weight: 900;
     line-height: 2.2;
     color: white;

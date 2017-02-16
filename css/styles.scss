@@ -1,10 +1,12 @@
 @import 'normalize';
+@import 'variables';
 @import 'form-component';
+@import 'custom-checkbox';
 @import 'result-component';
 
 .active {
-  background-color: #222222;
-  color: white!important;
+  background-color: $soft-black;
+  color: white !important;
 }
 
 .hide-form {
