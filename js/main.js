@@ -7,12 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
         $resultWrapper = qs(".result-wrapper"),
         $checkedItems;
 
-
-    function toggleCheckedItem() {
+    changeEventListener();
+    buyButtonClickListener();
+    
+    addActiveClass(document.querySelector(".default-checkbox"));
+    
+    function changeEventListener() {
         for (var i = 0; i < $checkboxes.length; i++) {
-            if ($checkboxes[i].checked) {
-                addActiveClass($checkboxes[i]);
-            }
             $checkboxes[i].addEventListener("change", function () {
                 if (this.checked == false) {
                     this.checked = true;
@@ -30,9 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    toggleCheckedItem();
-
-    function showResult() {
+    function buyButtonClickListener() {
         $buyNowButton.addEventListener("click", function () {
             for (var k = 0; k < $checkboxes.length; k++) {
                 if ($checkboxes[k].checked == true) {
@@ -43,8 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
             $resultWrapper.className += " show-result";
         });
     }
-
-    showResult();
 
     function addActiveClass(element) {
         element.parentNode.className += " active";
