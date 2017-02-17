@@ -4,37 +4,52 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="dist/styles.css">
+    <!-- added this style tag to add style for the component wrapper and leave component styles clear -->
+    <style>
+        .form-component {
+            overflow: hidden;
+            height:500px;
+            width: 500px;
+            margin: 50px auto 0 auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<div class="form-wrapper">
-    <form class="main-form">
-        <label class="checkbox-label">
-            <input type="checkbox" class="default-checkbox" name="check" checked>
-            <span class="custom-checkbox"></span><span class="item-title">STANDARD EDITION</span>
-        </label>
-        <label class="checkbox-label">
-            <input type="checkbox" class="default-checkbox" name="check">
-            <span class="custom-checkbox"></span><span class="item-title">SILVER EDITION</span>
-        </label>
-        <label class="checkbox-label">
-            <input type="checkbox" class="default-checkbox" name="check">
-            <span class="custom-checkbox"></span><span class="item-title">GOLD EDITION</span>
-        </label>
-        <label class="checkbox-label">
-            <input type="checkbox" class="default-checkbox" name="check">
-            <span class="custom-checkbox"></span><span class="item-title">DIAMOND EDITION</span>
-        </label>
-        <label class="checkbox-label">
-            <input type="checkbox" class="default-checkbox" name="check">
-            <span class="custom-checkbox"></span><span class="item-title">PLATINUM EDITION</span>
-        </label>
-    </form>
-    <div class="button">BUY NOW</div>
-</div>
-<div class="result-wrapper">
-    <div class="selected-item-title">STANDARD EDITION</div>
-    <div class="gratitude">THANK YOU!</div>
+<div class="form-component">
+    <div class="form-wrapper">
+        <form class="main-form">
+            <label class="checkbox-label">
+                <input type="checkbox" class="default-checkbox" name="check" checked>
+                <span class="custom-checkbox"></span><span class="item-title">STANDARD EDITION</span>
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" class="default-checkbox" name="check">
+                <span class="custom-checkbox"></span><span class="item-title">SILVER EDITION</span>
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" class="default-checkbox" name="check">
+                <span class="custom-checkbox"></span><span class="item-title">GOLD EDITION</span>
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" class="default-checkbox" name="check">
+                <span class="custom-checkbox"></span><span class="item-title">DIAMOND EDITION</span>
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" class="default-checkbox" name="check">
+                <span class="custom-checkbox"></span><span class="item-title">PLATINUM EDITION</span>
+            </label>
+        </form>
+        <div class="button">BUY NOW</div>
+    </div>
+    <div class="result-wrapper">
+        <div class="selected-item-title">STANDARD EDITION</div>
+        <div class="gratitude">THANK YOU!</div>
+    </div>
 </div>
 <script src="js/main.js"></script>
+<script>//added this script tag to invoke component initialization method separately from component logic
+    formComponent.init(document.querySelector(".form-component"));
+</script>
 </body>
 </html>
