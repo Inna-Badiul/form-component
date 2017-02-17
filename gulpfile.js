@@ -19,5 +19,10 @@ gulp.task('js:copy', function () {
     return gulp.src('assets/js/* ')
         .pipe(gulp.dest('dist'));
 });
-gulp.task('default', ['js:copy', 'sass', 'watch']);
+
+gulp.task('images:copy', function () {
+    return gulp.src('assets/images/* ')
+        .pipe(gulp.dest('dist/images'));
+});
+gulp.task('default', ['js:copy', 'images:copy', 'sass', 'watch']);
 

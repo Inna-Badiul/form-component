@@ -7,7 +7,7 @@ var formComponent = {
             $selectedItemTitle = qs(".selected-item-title"),
             $formWrapper = qs(".form-wrapper"),
             $resultWrapper = qs(".result-wrapper"),
-            $defaultCheckbox = qs(".default-checkbox"),
+            $defaultCheckbox = qs(".default-checkbox").checked,
             $checkedItems;
 
         addChangeEventListeners();
