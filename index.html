@@ -49,7 +49,9 @@
 </div>
 <script src="dist/main.js"></script>
 <script>//added this script tag to invoke component initialization method separately from component logic
+document.addEventListener("DOMContentLoaded", function(event) {
     formComponent.init(document.querySelector(".form-component"));
+})
 </script>
 </body>
 </html>
