@@ -24,12 +24,12 @@
       width: 19px;
       height: 19px;
       vertical-align: middle;
-      background: white url(../images/sprite.png) -37px -6px no-repeat;
+      background: white url(images/sprite.png) -37px -6px no-repeat;
       cursor: pointer;
       background-size: 62px;
     }
     &:checked + .custom-checkbox {
-      background: white url(../images/sprite.png) -6px -6px no-repeat;
+      background: white url(images/sprite.png) -6px -6px no-repeat;
       background-size: 62px;
     }
   }

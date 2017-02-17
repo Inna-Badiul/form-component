@@ -7,13 +7,11 @@ var formComponent = {
             $selectedItemTitle = qs(".selected-item-title"),
             $formWrapper = qs(".form-wrapper"),
             $resultWrapper = qs(".result-wrapper"),
-            $defaultCheckbox = qs(".default-checkbox").checked,
+            $checkedCheckbox = qs("input:checked"),
             $checkedItems;
-
         addChangeEventListeners();
         buyButtonClickListener();
-
-        addActiveClass($defaultCheckbox);
+        addActiveClass($checkedCheckbox);
 
         function addChangeEventListeners() {
             for (var i = 0; i < $checkboxes.length; i++) {
