@@ -4,6 +4,7 @@
 
 ```
 npm install
+npm install --global gulp-cli
 npm run build
 ```
 
