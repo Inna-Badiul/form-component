@@ -13,11 +13,14 @@
     background-color: $light-green;
     color: #71cb5c;
     border: 1px solid white;
+    margin:0;
+    font-weight: 400;
   }
   .gratitude {
     border-top: $big-border $green;
     font-weight: 900;
     line-height: 2.2;
     color: white;
+    margin:0;
   }
 }

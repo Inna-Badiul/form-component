@@ -412,13 +412,23 @@ template {
   .form-component .form-wrapper .main-form {
     text-align: center;
     padding: 23px 0; }
+    .form-component .form-wrapper .main-form fieldset {
+      border: 0;
+      padding: 0.01em 0 0 0;
+      margin: 0;
+      min-width: 0; }
   .form-component .form-wrapper .button {
     font-weight: 700;
     border-top: 4px solid black;
     text-align: center;
     font-size: 15px;
     line-height: 2.1;
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: white;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    width: 100%; }
 
 .form-component .checkbox-label {
   color: #222222;
@@ -465,12 +475,15 @@ template {
     padding: 36px 0;
     background-color: #d9f5ca;
     color: #71cb5c;
-    border: 1px solid white; }
+    border: 1px solid white;
+    margin: 0;
+    font-weight: 400; }
   .form-component .result-wrapper .gratitude {
     border-top: 4px solid #3cc700;
     font-weight: 900;
     line-height: 2.2;
-    color: white; }
+    color: white;
+    margin: 0; }
 
 .form-component .active {
   background-color: #222222;
