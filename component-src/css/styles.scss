@@ -1,22 +1,25 @@
 @import 'normalize';
-@import 'variables';
-@import 'form-wrapper';
-@import 'custom-checkbox';
-@import 'result-component';
 
-.active {
-  background-color: $soft-black;
-  color: white !important;
-}
+.form-component {
+  @import 'variables';
+  @import 'form-wrapper';
+  @import 'custom-checkbox';
+  @import 'result-component';
 
-.hide-form {
-  opacity: 0;
-  margin-top: -319px;
-  transition: opacity 0.3s ease 0.5s, margin-top 0.3s ease-out;
-}
+  .active {
+    background-color: $soft-black;
+    color: white !important;
+  }
 
-.show-result {
-  opacity: 1;
-  margin-top: 90px;
-  transition: opacity 0.3s ease 0.5s, margin-top 0.8s ease-out;
+  .hide-form {
+    opacity: 0;
+    margin-top: -319px;
+    transition: opacity 0.3s ease 0.5s, margin-top 0.3s ease-out;
+  }
+
+  .show-result {
+    opacity: 1;
+    margin-top: 90px;
+    transition: opacity 0.3s ease 0.5s, margin-top 0.8s ease-out;
+  }
 }

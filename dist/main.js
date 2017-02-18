@@ -11,8 +11,7 @@ var formComponent = {
             $checkedItems;
         addChangeEventListeners();
         buyButtonClickListener();
-        addActiveClass($checkedCheckbox);
-
+        addActiveClass($checkedCheckbox);//added active class to the selected checkbox here, because Firefox and Internet Explorer saves the state of the checkbox, after page reloading
         function addChangeEventListeners() {
             for (var i = 0; i < $checkboxes.length; i++) {
                 $checkboxes[i].addEventListener("change", function () {

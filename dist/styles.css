@@ -402,17 +402,17 @@ template {
 [hidden] {
   display: none; }
 
-.form-wrapper {
+.form-component .form-wrapper {
   margin: 0 auto;
   height: 310px;
   width: 230px;
   border: 4px solid black;
   border-radius: 5px;
   text-transform: uppercase; }
-  .form-wrapper .main-form {
+  .form-component .form-wrapper .main-form {
     text-align: center;
     padding: 23px 0; }
-  .form-wrapper .button {
+  .form-component .form-wrapper .button {
     font-weight: 700;
     border-top: 4px solid black;
     text-align: center;
@@ -420,7 +420,7 @@ template {
     line-height: 2.1;
     cursor: pointer; }
 
-.checkbox-label {
+.form-component .checkbox-label {
   color: #222222;
   text-align: left;
   margin-bottom: 7px;
@@ -433,13 +433,13 @@ template {
   font-size: 13px;
   height: 36px;
   line-height: 36px; }
-  .checkbox-label:last-child {
+  .form-component .checkbox-label:last-child {
     margin-bottom: 0; }
-  .checkbox-label .item-title {
+  .form-component .checkbox-label .item-title {
     margin-left: 7px; }
-  .checkbox-label .default-checkbox {
+  .form-component .checkbox-label .default-checkbox {
     display: none; }
-    .checkbox-label .default-checkbox + .custom-checkbox {
+    .form-component .checkbox-label .default-checkbox + .custom-checkbox {
       display: inline-block;
       width: 19px;
       height: 19px;
@@ -447,11 +447,11 @@ template {
       background: white url(images/sprite.png) -37px -6px no-repeat;
       cursor: pointer;
       background-size: 62px; }
-    .checkbox-label .default-checkbox:checked + .custom-checkbox {
+    .form-component .checkbox-label .default-checkbox:checked + .custom-checkbox {
       background: white url(images/sprite.png) -6px -6px no-repeat;
       background-size: 62px; }
 
-.result-wrapper {
+.form-component .result-wrapper {
   opacity: 0;
   text-transform: uppercase;
   width: 252px;
@@ -461,27 +461,27 @@ template {
   border-radius: 5px;
   text-align: center;
   background-color: #3cc700; }
-  .result-wrapper .selected-item-title {
+  .form-component .result-wrapper .selected-item-title {
     padding: 36px 0;
     background-color: #d9f5ca;
     color: #71cb5c;
     border: 1px solid white; }
-  .result-wrapper .gratitude {
+  .form-component .result-wrapper .gratitude {
     border-top: 4px solid #3cc700;
     font-weight: 900;
     line-height: 2.2;
     color: white; }
 
-.active {
+.form-component .active {
   background-color: #222222;
   color: white !important; }
 
-.hide-form {
+.form-component .hide-form {
   opacity: 0;
   margin-top: -319px;
   transition: opacity 0.3s ease 0.5s, margin-top 0.3s ease-out; }
 
-.show-result {
+.form-component .show-result {
   opacity: 1;
   margin-top: 90px;
   transition: opacity 0.3s ease 0.5s, margin-top 0.8s ease-out; }

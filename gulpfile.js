@@ -24,5 +24,5 @@ gulp.task('images:copy', function () {
     return gulp.src('component-src/images/* ')
         .pipe(gulp.dest('dist/images'));
 });
-gulp.task('default', ['js:copy', 'images:copy', 'sass', 'watch']);
-
+gulp.task('dev', ['js:copy', 'images:copy', 'sass', 'watch']);
+gulp.task('build', ['js:copy', 'images:copy', 'sass']);
